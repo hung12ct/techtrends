@@ -30,7 +30,7 @@ spec:
         livenessProbe:
           httpGet:
             path: {{ .Values.livenessProbe.path }}
-            port: {{ .Values.livenessProbe.path }}
+            port: {{ .Values.readinessProbe.port }}
         readinessProbe:
           httpGet:
             path: {{ .Values.livenessProbe.path }}
