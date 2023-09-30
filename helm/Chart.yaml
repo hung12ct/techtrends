@@ -1,0 +1,9 @@
+apiVersion: v1
+name: techtrends 
+description: Techtrends deployment
+keywords:
+- techtrends
+version: 1.0.0
+maintainers:
+- name: Hung Nguyen 
+  email: hungit.khtn06@gmail.com
