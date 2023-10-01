@@ -8,22 +8,29 @@ docker run -d -p 7111:3111 techtrends
 docker logs d63ae892a855
 
 ## Logs from the container running the TechTrends application
+ * Serving Flask app 'app' (lazy loading)
+ * Environment: production
+   WARNING: This is a development server. Do not use it in a production deployment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+WARNING:werkzeug: * Running on all addresses.
+   WARNING: This is a development server. Do not use it in a production deployment.
 INFO:werkzeug: * Running on http://172.17.0.2:3111/ (Press CTRL+C to quit)
-INFO:werkzeug:172.17.0.1 - - [28/Sep/2023 16:24:08] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [28/Sep/2023 16:24:08] "GET /static/css/main.css HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [28/Sep/2023 16:24:08] "GET /favicon.ico HTTP/1.1" 404 -
+INFO:werkzeug:172.17.0.1 - - [01/Oct/2023 01:41:12] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [01/Oct/2023 01:41:12] "GET /static/css/main.css HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [01/Oct/2023 01:41:12] "GET /favicon.ico HTTP/1.1" 404 -
 INFO:app:Article 2020 CNCF Annual Report retrieved!
-INFO:werkzeug:172.17.0.1 - - [28/Sep/2023 16:24:11] "GET /1 HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [28/Sep/2023 16:24:12] "GET /static/css/main.css HTTP/1.1" 304 -
-INFO:werkzeug:172.17.0.1 - - [28/Sep/2023 16:26:45] "GET / HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [28/Sep/2023 16:26:45] "GET /static/css/main.css HTTP/1.1" 304 -
-INFO:app:Article 2020 CNCF Annual Report retrieved!
-INFO:werkzeug:172.17.0.1 - - [28/Sep/2023 16:26:48] "GET /1 HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [28/Sep/2023 16:26:48] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:172.17.0.1 - - [01/Oct/2023 01:41:22] "GET /1 HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [01/Oct/2023 01:41:22] "GET /static/css/main.css HTTP/1.1" 304 -
+ERROR:app:Article with id 100 does not exist!
+INFO:werkzeug:172.17.0.1 - - [01/Oct/2023 01:41:29] "GET /100 HTTP/1.1" 404 -
+INFO:werkzeug:172.17.0.1 - - [01/Oct/2023 01:41:29] "GET /static/css/main.css HTTP/1.1" 304 -
 INFO:app:The About Us page is rendered
-INFO:werkzeug:172.17.0.1 - - [28/Sep/2023 16:26:54] "GET /about HTTP/1.1" 200 -
-INFO:werkzeug:172.17.0.1 - - [28/Sep/2023 16:26:54] "GET /static/css/main.css HTTP/1.1" 304 -
-INFO:werkzeug:172.17.0.1 - - [28/Sep/2023 16:28:50] "POST /create HTTP/1.1" 400 -
-INFO:app:Article test title created!
-INFO:werkzeug:172.17.0.1 - - [28/Sep/2023 16:30:13] "POST /create HTTP/1.1" 302 -
-INFO:werkzeug:172.17.0.1 - - [28/Sep/2023 16:30:13] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [01/Oct/2023 01:41:37] "GET /about HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [01/Oct/2023 01:41:37] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:werkzeug:172.17.0.1 - - [01/Oct/2023 01:41:43] "GET /create HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [01/Oct/2023 01:41:43] "GET /static/css/main.css HTTP/1.1" 304 -
+INFO:app:Article test created!
+INFO:werkzeug:172.17.0.1 - - [01/Oct/2023 01:41:50] "POST /create HTTP/1.1" 302 -
+INFO:werkzeug:172.17.0.1 - - [01/Oct/2023 01:41:50] "GET / HTTP/1.1" 200 -
+INFO:werkzeug:172.17.0.1 - - [01/Oct/2023 01:41:50] "GET /static/css/main.css HTTP/1.1" 304 -
